@@ -1,1 +1,45 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Awesome Page</title>
+    <!-- BotStar chatbot script -->
+    <script src="https://widget.botstar.com/js/sdk/2.0.0-beta.4/botstar-sdk.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to My Awesome Page</h1>
+    <p>Here are some pictures and videos:</p>
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+      <img src="images/picture1.jpg" alt="Picture 1">
+      <img src="images/picture2.jpg" alt="Picture 2">
+      <img src="images/picture3.jpg" alt="Picture 3">
+    </div>
+
+    <!-- Video Gallery -->
+    <div class="video-gallery">
+      <video width="320" height="240" controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        <source src="videos/video1.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" controls>
+        <source src="videos/video2.mp4" type="video/mp4">
+        <source src="videos/video2.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- BotStar chatbot widget -->
+    <div id="botstar-widget-container"></div>
+    <script>
+      window.botstarSDK.init({
+        apiKey: 'YOUR_API_KEY',
+        embed: true,
+        chatbotId: 'YOUR_CHATBOT_ID',
+        baseUrl: 'https://widget.botstar.com'
+      });
+    </script>
+  </body>
+</html>
